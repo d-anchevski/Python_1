@@ -18,3 +18,19 @@
 Введите численность сотрудников фирмы: 10
 Прибыль фирмы в расчете на одного сотрудника = 50.0
 """
+
+income = float(input("Enter income value:\n"))
+loses = float(input("Enter loses value:\n"))
+profit = income - loses
+if profit > 0:
+    status = "Profit"
+elif profit < 0:
+    status = "Lesion"
+else:
+    status = "Balance"
+print(f"Financial result is {status}, its value is {abs(profit):.2f}")
+
+print(f"Profitability: {profit / income: .2f}")
+
+staff_qnt = int(input("Enter staff members quantity:\n"))
+print(f"Profit per staff member: {profit / staff_qnt: .2f}")
