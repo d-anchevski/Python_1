@@ -7,12 +7,12 @@
 """
 from functools import reduce
 
-result1 = reduce(lambda x, y: x * y, (el for el in range(100, 1001) if el % 2 == 0))  # For a random list
+result1 = reduce(lambda x, y: x * y, (el for el in range(100, 1001) if el % 2 == 0))  # For a "random" list of values
 print(f"Result with even-check: {result1}")
 
-# But we for a given list we can just take every second element - and it will be even
+# But for a given list we can just take every second element - and it will be even
 
-result2 = reduce(lambda x, y: x * y, (el for el in range(100, 1001, 2)))  # For a random list
+result2 = reduce(lambda x, y: x * y, (el for el in range(100, 1001, 2)))  # For a directly given list
 print(f"Result with every second element: {result2}")
 
 # An ordinary calculation - just to check
