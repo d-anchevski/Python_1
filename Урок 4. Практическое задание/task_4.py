@@ -12,7 +12,7 @@ init_lst = [2, 2, 2, 7, 23, 1, 44, 44, 3, 2, 10, 7, 4, 11]
 proc_lst = (init_lst[i] for i in range(0, len(init_lst)) if init_lst[i] not in
             (init_lst[j] for j in range(i + 1, len(init_lst))) and init_lst[i] not in (init_lst[k] for k in
                                                                                        range(0, i)))
-# I believe this could have benn resolved easier - but though here I did use even three generator-expressions,
+# I believe this could have been resolved easier - but though here I did use even three generator-expressions,
 # two of which are even in-built )))
 
 print(f"The resulting array is: {list(proc_lst)}")
