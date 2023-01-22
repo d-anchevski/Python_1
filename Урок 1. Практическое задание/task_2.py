@@ -9,3 +9,20 @@
 Введите время в секундах: 3600
 Время в формате ч:м:с - 1.0 : 60.0 : 3600
 """
+time_sec = int(input("Enter timeperiod in seconds\n"))
+time_hrs = time_sec / 3600
+time_mnt = time_sec / 60
+
+""" Вот это дословно то, что просили вывести в задании (то есть все в часах, все в минутах и все в секундах, 
+но это как-то странно, так как формат отображения не релевантен значению!"""
+print(f"ACCORDING TO TASK EXAMPLE: Input time in hh:mm:ss format - {time_hrs: .2f} : {time_mnt: .2f} : {time_sec}")
+
+"""Направшивается решение, где введенное количество секунд будет переводиться в полноценный промежуток времени,
+в формате чч:мм:сс
+
+Это можно выполнить например таким образом:"""
+time_hrs_new = time_sec // 3600
+time_mnt_new = (time_sec % 3600) // 60
+time_sec_new = (time_sec % 3600) % 60
+print(f"ACCORDING TO SENSE: Input time period in hh:mm:ss format - {time_hrs_new} : {time_mnt_new} : {time_sec_new}")
+# Как добавить опережающие нули - чтобы отображалось типа "01:08:05" - я пока не нашел
