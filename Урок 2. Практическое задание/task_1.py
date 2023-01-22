@@ -15,3 +15,10 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+from datetime import datetime
+
+worker_1 = ["Dmitrij", 36, 2560.5, True, None, ["Project_1", "Project_4"], ("N23-42RN", datetime(1986, 6, 27), "Minsk")]
+
+# DType check cycle:
+for el in worker_1:
+    print(type(el))
