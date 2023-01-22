@@ -3,3 +3,6 @@
 Необходимо решить задание в одну строку.
 Подсказка: использовать функцию range() и генераторное выражение.
 """
+
+array = (el for el in range(20, 241) if el % 20 == 0 or el % 21 == 0)  # '241 for 240 to be
+print(f"These are multiples for 20 or 21: {list(array)}")
